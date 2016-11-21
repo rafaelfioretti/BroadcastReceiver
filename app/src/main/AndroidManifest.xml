@@ -21,21 +21,21 @@
                 <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".receiver.MyOrderedReceiver1">
             <intent-filter android:priority="1">
-            <action android:name="orderedbroadcast"></action>
+                <action android:name="orderedbroadcast" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.MyOrderedReceiver2">
+            <intent-filter android:priority="2">
+                //quanto maior a prioridade, 1o ele será executado.
+                <action android:name="orderedbroadcast" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receiver.MyOrderedReceiver2">
-            <intent-filter android:priority="2">
-            <action android:name="orderedbroadcast"></action>
-        </intent-filter>
-        </receiver>
+        <activity android:name=".AlarmeActivity"></activity>
 
-
-
+        <receiver android:name=".receiver.AlarmeReceiver"/>
     </application>
 
 </manifest>
