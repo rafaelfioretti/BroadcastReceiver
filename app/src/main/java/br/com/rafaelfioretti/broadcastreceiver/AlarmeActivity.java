@@ -36,7 +36,5 @@ public class AlarmeActivity extends AppCompatActivity {
 
         }
 
-
-
     }
 }
